@@ -1,0 +1,209 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+    <!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
+    <!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
+    <!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
+
+</head>
+<body>
+    @*<div class="navbar navbar-inverse navbar-fixed-top">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    @Html.ActionLink("Application name", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+                </div>
+                <div class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav">
+                        <li>@Html.ActionLink("Home", "Index", "Home")</li>
+                        <li>@Html.ActionLink("About", "About", "Home")</li>
+                        <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
+                    </ul>
+                    @Html.Partial("_LoginPartial")
+                </div>
+            </div>
+        </div>
+        <div class="container body-content">*@
+    <!-- Wrapper -->
+    <div id="wrapper">
+
+        <!-- Header -->
+        <header id="header">
+            <h1><a href="#">Scrub Luv</a></h1>
+            <nav class="links">
+                <ul>
+                    <li>@Html.ActionLink("Food","Index", "Food")</li>
+                    <li>@Html.ActionLink("Art", "Index", "Art")</li>
+                    <li>@Html.ActionLink("Gaming", "Index", "Gaming")</li>
+                </ul>
+            </nav>
+            <!--<nav class="main">
+                <ul>
+                    <li class="search">
+                        <a class="fa-search" href="#search">Search</a>
+                        <form id="search" method="get" action="#">
+                            <input type="text" name="query" placeholder="Search" />
+                        </form>
+                    </li>
+                    <li class="menu">
+                        <a class="fa-bars" href="#menu">Menu</a>
+                    </li>
+                </ul>
+            </nav>-->
+        </header>
+
+        <!-- Menu -->
+        <!--<section id="menu">-->
+        <!-- Search -->
+        <!--<section>
+            <form class="search" method="get" action="#">
+                <input type="text" name="query" placeholder="Search" />
+            </form>
+        </section>-->
+        <!-- Links
+            <section>
+                <ul class="links">
+                    <li>
+                        <a href="#">
+                            <h3>Lorem ipsum</h3>
+                            <p>Feugiat tempus veroeros dolor</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <h3>Dolor sit amet</h3>
+                            <p>Sed vitae justo condimentum</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <h3>Feugiat veroeros</h3>
+                            <p>Phasellus sed ultricies mi congue</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <h3>Etiam sed consequat</h3>
+                            <p>Porta lectus amet ultricies</p>
+                        </a>
+                    </li>
+                </ul>
+            </section>  -->
+        <!-- Actions
+            <section>
+                <ul class="actions vertical">
+                    <li><a href="#" class="button big fit">Log In</a></li>
+                </ul>
+            </section>
+             -->
+        <!--</section>-->
+        <!-- Main -->
+        <div id="main">
+            @RenderBody()
+        </div>
+
+        <!-- Sidebar -->
+        <section id="sidebar">
+
+            <!-- Intro -->
+            <section id="intro">
+                <a href="#" class="logo"><img src="~/images/ScrubLogoOfficialYellow.png" alt="" /></a>
+                <header>
+                    <h2>Scrub Luv</h2>
+                    <p>If you're a scrub, own it!</p>
+                </header>
+            </section>
+
+            
+            <!-- Posts List -->
+            <section id="category-list">
+                <ul class="posts">
+                    <li>
+                        <article>
+                            <header>
+                                <h3><a href="#">Main Courses</a></h3>
+                                <p>Eat well every day</p>
+                            </header>
+                            <a href="#" class="image"><img src="images/pic08.jpg" alt="" /></a>
+                        </article>
+                    </li>
+                    <li>
+                        <article>
+                            <header>
+                                <h3><a href="#">Side Dishes</a></h3>
+                                <p>Inspiration for add-ons</p>
+                            </header>
+                            <a href="#" class="image"><img src="images/pic10.jpg" alt="" /></a>
+                        </article>
+                    </li>
+                    <li>
+                        <article>
+                            <header>
+                                <h3><a href="#">Desserts</a></h3>
+                                <p>Treat yourself</p>
+                            </header>
+                            <a href="#" class="image"><img src="images/pic09.jpg" alt="" /></a>
+                        </article>
+                    </li>
+                    <li>
+                        <article>
+                            <header>
+                                <h3><a href="#">Quick and Easy</a></h3>
+                                <p>Simple Scrub eating in no time!</p>
+                            </header>
+                            <a href="#" class="image"><img src="images/pic11.jpg" alt="" /></a>
+                        </article>
+                    </li>
+
+                </ul>
+            </section>
+           
+            <!-- About -->
+            <section class="blurb">
+                <h2>About</h2>
+                <p>Mauris neque quam, fermentum ut nisl vitae, convallis maximus nisl. Sed mattis nunc id lorem euismod amet placerat. Vivamus porttitor magna enim, ac accumsan tortor cursus at phasellus sed ultricies.</p>
+                <ul class="actions">
+                    <li><a href="#" class="button">Learn More</a></li>
+                </ul>
+            </section>
+
+            <!-- Footer -->
+            <section id="footer">
+                <ul class="icons">
+                    <li><a href="#" class="fa-youtube-square"><span class="label">Twitter</span></a></li>
+                    @*<li><a href="#" class="fa-twitter"><span class="label">Twitter</span></a></li>
+                    <li><a href="#" class="fa-facebook"><span class="label">Facebook</span></a></li>
+                    <li><a href="#" class="fa-instagram"><span class="label">Instagram</span></a></li>
+                    <li><a href="#" class="fa-rss"><span class="label">RSS</span></a></li>
+                    <li><a href="#" class="fa-envelope"><span class="label">Email</span></a></li>*@
+                </ul>
+                <p class="copyright">&copy; ScrubLuv. Design: <a href="http://html5up.net">HTML5 UP</a>. </p>
+            </section>
+
+        </section>
+
+    </div>
+
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @Scripts.Render("~/bundles/html5up")
+    @RenderSection("scripts", required: false)
+    <!--
+    Design: Future Imperfect by HTML5 UP
+    html5up.net 
+    Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+    The original work has been modified.
+    -->
+
+</body>
+</html>
