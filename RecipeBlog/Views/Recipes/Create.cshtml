@@ -1,4 +1,6 @@
-﻿@model RecipeBlog.Models.Recipe
+﻿
+@model RecipeBlog.Models.Recipe
+@using RecipeBlog.Helpers
 
 @{
     ViewBag.Title = "New Recipe";
@@ -42,7 +44,7 @@
         <div class="form-group">
             @Html.LabelFor(model => model.Ingredients, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
-                @Html.TextAreaFor(model => model.Ingredients, new { htmlAttributes = new { @class = "form-control" } })
+                <textarea cols="20" class="htmleditor" id="Ingredients" name="Ingredients" rows="2">@if (!ViewBag.NewCreate) { @Html.Raw(Model.Ingredients) }</textarea>
                 @Html.ValidationMessageFor(model => model.Ingredients, "", new { @class = "text-danger" })
             </div>
         </div>
@@ -50,7 +52,7 @@
         <div class="form-group">
             @Html.LabelFor(model => model.QuickInstructions, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
-                @Html.TextAreaFor(model => model.QuickInstructions, new { htmlAttributes = new { @class = "form-control" } })
+                <textarea cols="20" class="htmleditor" id="QuickInstructions" name="QuickInstructions" rows="2">@if (!ViewBag.NewCreate) { @Html.Raw(Model.QuickInstructions) }</textarea>
                 @Html.ValidationMessageFor(model => model.QuickInstructions, "", new { @class = "text-danger" })
             </div>
         </div>
@@ -58,7 +60,7 @@
         <div class="form-group">
             @Html.LabelFor(model => model.FullInstructions, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
-                @Html.TextAreaFor(model => model.FullInstructions, new { htmlAttributes = new { @class = "form-control" } })
+                <textarea cols="20" class="htmleditor" id="FullInstructions" name="FullInstructions" rows="2">@if (!ViewBag.NewCreate) { @Html.Raw(Model.FullInstructions) }</textarea>
                 @Html.ValidationMessageFor(model => model.FullInstructions, "", new { @class = "text-danger" })
             </div>
         </div>
@@ -91,25 +93,15 @@
        <div class="form-group">
                 @Html.LabelFor(model => model.SelectedCategories, htmlAttributes: new { @class = "control-label col-md-2" })
                 <div class="col-md-10">
-                    <div class="form-check">
-                    @foreach (var c in ViewBag.AllCategories)
+                    @if (!ViewBag.NewCreate)
                     {
-                       
-                        <div>
-                            <input type="checkbox"
-                                   name="selectedCategories"
-                                   value="@c.Id"
-                            @if (!ViewBag.NewCreate) { 
-                                   @(Html.Raw(Model.SelectedCategories.Contains(c) ? "checked=\"checked\"" : "")) 
-                                }
-                            />
-                            
-                            <span>@c.Name</span>
-                        </div>
+                        @CustomHelpers.CategoryCheckBoxList(ViewBag.AllCategories, Model.SelectedCategories, ViewBag.NewCreate)
                     }
-                        
+                    else
+                    {
+                        @CustomHelpers.CategoryCheckBoxList(ViewBag.AllCategories, null, ViewBag.NewCreate)
+                    }
 
-                    </div>
                 </div>
             </div>
        

@@ -27,6 +27,7 @@ namespace RecipeBlog
                       "~/Scripts/skel.min.js",
                       "~/Scripts/util.js",
                       "~/Scripts/bootstrap-datepicker.min.js",
+                      "~/Scripts/tinymce/tinymce.min.js",
                       "~/Scripts/main.js"
                       ));
 

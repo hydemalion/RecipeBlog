@@ -11,7 +11,7 @@ namespace RecipeBlog.Helpers
 {
     public static class CustomHelpers
     {
-        public static string CheckBoxList(this HtmlHelper helper, List<Category> categories)
+        public static IHtmlString CategoryCheckBoxList(List<Category> categories, ICollection<Category> selectedCategories, bool noSelected)
         {
             string CheckBoxList = "";
 
@@ -19,15 +19,24 @@ namespace RecipeBlog.Helpers
 
             foreach (Category c in categories)
             {
+                CheckBoxList += "<div>";
                 var builder = new TagBuilder("input");
-                builder.GenerateId("category" + c.Id.ToString());
-                builder.MergeAttribute("name", "Category");
+                //builder.GenerateId("category" + c.Id.ToString());
+                builder.MergeAttribute("name", "selectedCategories");
                 builder.MergeAttribute("value", c.Id.ToString());
+                builder.MergeAttribute("type", "checkbox");
+                if (selectedCategories != null)
+                { 
+                    if (selectedCategories.Contains(c))
+                        builder.MergeAttribute("checked", "checked");
+                }
                 CheckBoxList += builder.ToString(TagRenderMode.SelfClosing);
+                CheckBoxList += "<span>" + c.Name + "</span>";
+                CheckBoxList += "</div>";
             }
 
             CheckBoxList += "</div>";
-            return CheckBoxList;
+            return new HtmlString(CheckBoxList);
         }
 
     }

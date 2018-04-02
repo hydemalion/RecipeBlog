@@ -65,11 +65,14 @@ namespace RecipeBlog.Models
         [Required]
         public string PrepTime { get; set; }
         [Required]
+        [AllowHtml]
         public string Ingredients { get; set; }
         [DisplayName("Quick Instructions")]
+        [AllowHtml]
         public string QuickInstructions { get; set; }
         [DisplayName("Full Instructions")]
         [Required]
+        [AllowHtml]
         public string FullInstructions { get; set; }
         [DisplayName("Image Name")]
         public string ImageName { get; set; }
@@ -79,6 +82,7 @@ namespace RecipeBlog.Models
         [Required]
         public DateTime PublishDate { get; set; }
 
+        [DisplayName("Categories")]
         public virtual ICollection<Category> SelectedCategories { get; set; }
 
 
