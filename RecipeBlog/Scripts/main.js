@@ -3,6 +3,16 @@
 	html5up.net | @ajlkn
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 */
+$(document).ready(function () {
+    var date_input = $('input.date-control');
+    var options = {
+        format: 'mm/dd/yyyy',
+        container: 'body',
+        todayHighlight: true,
+        autoclose: true,
+    };
+    date_input.datepicker(options);
+})
 
 (function($) {
 
@@ -113,3 +123,4 @@
 	});
 
 })(jQuery);
+

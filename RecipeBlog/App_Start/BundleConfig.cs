@@ -24,8 +24,9 @@ namespace RecipeBlog
                       "~/Scripts/respond.js"));
 
             bundles.Add(new ScriptBundle("~/bundles/html5up").Include(
-                      "~/Scripts/skel.js",
+                      "~/Scripts/skel.min.js",
                       "~/Scripts/util.js",
+                      "~/Scripts/bootstrap-datepicker.min.js",
                       "~/Scripts/main.js"
                       ));
 
@@ -35,6 +36,7 @@ namespace RecipeBlog
                       "~/Content/ie8.css",
                       "~/Content/ie9.css",
                       "~/Content/font-awesome.min.css",
+                      "~/Content/bootstrap-datepicker3.min.css",
                       "~/Content/site.css"));
         }
     }
