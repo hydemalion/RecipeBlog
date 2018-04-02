@@ -72,3 +72,5 @@
 \\FileServer\rastleb$\Visual Studio 2015\Projects\RecipeBlog\RecipeBlog\obj\Debug\RecipeBlog.Migrations.Test1.resources
 \\FileServer\rastleb$\Visual Studio 2015\Projects\RecipeBlog\RecipeBlog\obj\Debug\RecipeBlog.Migrations.ManyToMany.resources
 \\FileServer\rastleb$\Visual Studio 2015\Projects\RecipeBlog\RecipeBlog\obj\Debug\RecipeBlog.Migrations.DataAttr.resources
+\\fileserver\rastleb$\visual studio 2015\Projects\RecipeBlog\RecipeBlog\obj\Debug\RecipeBlog.Migrations.selectedcategories.resources
+\\FileServer\rastleb$\Visual Studio 2015\Projects\RecipeBlog\RecipeBlog\obj\Debug\RecipeBlog.Migrations.selectedcategoriesfix.resources

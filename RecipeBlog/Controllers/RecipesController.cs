@@ -38,9 +38,20 @@ namespace RecipeBlog.Controllers
         // GET: Recipes/Create
         public ActionResult Create()
         {
-            Recipe model = new Recipe();
-            model.Categories = db.Categories.ToList();
-            return View(model);
+            //var model = new Recipe();
+            //InitializeRecipeDisplayCategories(model);
+            //return View(model);
+            ViewBag.AllCategories = db.Categories.ToList();
+            ViewBag.NewCreate = true;
+            return View();
+        }
+
+        private void InitializeRecipeDisplayCategories(Recipe r)
+        {
+            
+            r.SelectedCategories = db.Categories.ToList();
+
+            
         }
 
         // POST: Recipes/Create
@@ -48,16 +59,32 @@ namespace RecipeBlog.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Exclude = "Id,CreatedOn")] Recipe recipe)
+        public ActionResult Create([Bind(Include = "Title,Blurb,PrepTime,Ingredients,QuickInstructions,FullInstructions,ImageName,Published,PublishDate")] Recipe recipe, string[] selectedCategories)
         {
+            if (selectedCategories != null)
+            {
+                //this is done in constructor so may not have to do here?
+                recipe.SelectedCategories = new List<Category>();
+                foreach (string c in selectedCategories)
+                {
+                    Category addCategory = db.Categories.Find(int.Parse(c));
+                    recipe.SelectedCategories.Add(addCategory);
+                }
+
+            }
             if (ModelState.IsValid)
             {
-
+                recipe.CreatedOn = DateTime.Today;
                 db.Recipes.Add(recipe);
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
-
+            else
+            {
+                ViewBag.ErrorText = "Model State not valid.";
+                InitializeRecipeDisplayCategories(recipe);
+            }
+            ViewBag.NewCreate = false;
             return View(recipe);
         }
 

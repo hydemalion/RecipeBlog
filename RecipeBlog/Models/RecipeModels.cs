@@ -36,7 +36,7 @@ namespace RecipeBlog.Models
         {
 
             modelBuilder.Entity<Recipe>()
-                        .HasMany<Category>(s => s.Categories)
+                        .HasMany<Category>(s => s.SelectedCategories)
                         .WithMany(c => c.Recipes)
                         .Map(cs =>
                         {
@@ -52,7 +52,7 @@ namespace RecipeBlog.Models
     {
         public Recipe()
         {
-            this.Categories = new HashSet<Category>();
+            this.SelectedCategories = new HashSet<Category>();
         }
 
 
@@ -79,7 +79,7 @@ namespace RecipeBlog.Models
         [Required]
         public DateTime PublishDate { get; set; }
 
-        public virtual ICollection<Category> Categories { get; set; }
+        public virtual ICollection<Category> SelectedCategories { get; set; }
 
 
     }

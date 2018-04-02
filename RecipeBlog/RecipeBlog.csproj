@@ -194,6 +194,14 @@
     <Compile Include="Migrations\201803231754368_DataAttr.Designer.cs">
       <DependentUpon>201803231754368_DataAttr.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201803261513199_selectedcategories.cs" />
+    <Compile Include="Migrations\201803261513199_selectedcategories.Designer.cs">
+      <DependentUpon>201803261513199_selectedcategories.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201803292018244_selectedcategoriesfix.cs" />
+    <Compile Include="Migrations\201803292018244_selectedcategoriesfix.Designer.cs">
+      <DependentUpon>201803292018244_selectedcategoriesfix.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\IdentityModels.cs" />
@@ -308,6 +316,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201803231754368_DataAttr.resx">
       <DependentUpon>201803231754368_DataAttr.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201803261513199_selectedcategories.resx">
+      <DependentUpon>201803261513199_selectedcategories.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201803292018244_selectedcategoriesfix.resx">
+      <DependentUpon>201803292018244_selectedcategoriesfix.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

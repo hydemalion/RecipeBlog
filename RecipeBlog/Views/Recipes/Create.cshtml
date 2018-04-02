@@ -14,6 +14,7 @@
     <div class="form-horizontal">
         <h4>Recipe</h4>
         <hr />
+        @ViewBag.ErrorText
         @Html.ValidationSummary(true, "", new { @class = "text-danger" })
         <div class="form-group">
             @Html.LabelFor(model => model.Title, htmlAttributes: new { @class = "control-label col-md-2" })
@@ -89,13 +90,21 @@
         </div>
 
        <div class="form-group">
-                @Html.LabelFor(model => model.Categories, htmlAttributes: new { @class = "control-label col-md-2" })
+                @Html.LabelFor(model => model.SelectedCategories, htmlAttributes: new { @class = "control-label col-md-2" })
                 <div class="col-md-10">
                     <div class="form-check">
-                    @foreach (var c in Model.Categories)
+                    @foreach (var c in ViewBag.AllCategories)
                     {
+                       
                         <div>
-                            @Html.CheckBox(c.Id.ToString(), false, htmlAttributes: new { @class = "form-check-input position-static" })
+                            <input type="checkbox"
+                                   name="selectedCategories"
+                                   value="@c.Id"
+                            @if (!ViewBag.NewCreate) { 
+                                   @(Html.Raw(Model.SelectedCategories.Contains(c) ? "checked=\"checked\"" : "")) 
+                                }
+                            />
+                            
                             <span>@c.Name</span>
                         </div>
                     }

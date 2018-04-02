@@ -23,4 +23,12 @@ namespace RecipeBlog.Models
         public DateTime PublishDate { get; set; }
 
     }
+
+    public class RecipeCategories
+    {
+        public int CategoryID { get; set; }
+        public string Name { get; set; }
+        public bool Linked { get; set; }
+    }
+
 }
