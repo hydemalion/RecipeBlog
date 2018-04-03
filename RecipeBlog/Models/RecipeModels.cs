@@ -79,6 +79,7 @@ namespace RecipeBlog.Models
         public bool Published { get; set; }
         public DateTime CreatedOn { get; set; }
         [DisplayName("Publish Date")]
+        [DisplayFormat(DataFormatString = "{0:MM/dd/yyyy}", ApplyFormatInEditMode = true)]
         [Required]
         public DateTime PublishDate { get; set; }
 
