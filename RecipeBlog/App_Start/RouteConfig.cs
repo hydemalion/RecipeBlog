@@ -14,10 +14,16 @@ namespace RecipeBlog
             routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
 
             routes.MapRoute(
+                name: "Food",
+                url: "Food/{SEName}/{id}",
+                defaults: new { controller = "Food", action = "Index", SEName = UrlParameter.Optional, id = UrlParameter.Optional }
+            );
+            routes.MapRoute(
                 name: "Default",
                 url: "{controller}/{action}/{id}",
                 defaults: new { controller = "Home", action = "Index", id = UrlParameter.Optional }
             );
+            
         }
     }
 }

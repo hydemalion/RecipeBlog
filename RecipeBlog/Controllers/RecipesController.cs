@@ -35,6 +35,8 @@ namespace RecipeBlog.Controllers
             return View(recipe);
         }
 
+
+
         // GET: Recipes/Create
         public ActionResult Create()
         {
@@ -190,8 +192,15 @@ namespace RecipeBlog.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(int id)
         {
-            Recipe recipe = db.Recipes.Find(id);
-            db.Recipes.Remove(recipe);
+            Recipe DeleteRecipe = db.Recipes.Include(i => i.SelectedCategories).Where(i => i.Id == id).Single();
+            //remove selected categories first
+            foreach (var c in DeleteRecipe.SelectedCategories)
+            {
+                DeleteRecipe.SelectedCategories.Remove(c);
+                if (DeleteRecipe.SelectedCategories.Count == 0)
+                    break;
+            }
+            db.Recipes.Remove(DeleteRecipe);
             db.SaveChanges();
             return RedirectToAction("Index");
         }
