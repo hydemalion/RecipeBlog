@@ -18,13 +18,14 @@ namespace RecipeBlog.Controllers
         // GET: Food/
         public ActionResult Index()
         {
-
-            return View();
+            //get top 10 more recent recipes
+            List<Recipe> RecentRecipes = db.Recipes.OrderByDescending<Recipe, DateTime>(r => r.CreatedOn).Take(10).ToList();
+            return View(RecentRecipes);
         }
 
 
 
-        // GET: Food/Show/[SEName]/[id]
+        // GET: Food/Article/[SEName]/[id]
         public ActionResult Article(int? id)
         {
             if (id != null)

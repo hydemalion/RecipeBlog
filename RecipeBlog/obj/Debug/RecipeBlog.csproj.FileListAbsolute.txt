@@ -74,3 +74,5 @@
 \\FileServer\rastleb$\Visual Studio 2015\Projects\RecipeBlog\RecipeBlog\obj\Debug\RecipeBlog.Migrations.DataAttr.resources
 \\fileserver\rastleb$\visual studio 2015\Projects\RecipeBlog\RecipeBlog\obj\Debug\RecipeBlog.Migrations.selectedcategories.resources
 \\FileServer\rastleb$\Visual Studio 2015\Projects\RecipeBlog\RecipeBlog\obj\Debug\RecipeBlog.Migrations.selectedcategoriesfix.resources
+\\fileserver\rastleb$\visual studio 2015\Projects\RecipeBlog\RecipeBlog\bin\CoreFunctions.dll
+\\fileserver\rastleb$\visual studio 2015\Projects\RecipeBlog\RecipeBlog\bin\CoreFunctions.pdb

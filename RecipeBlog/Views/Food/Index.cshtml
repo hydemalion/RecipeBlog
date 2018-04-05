@@ -1,8 +1,39 @@
-﻿
+﻿@model IEnumerable<RecipeBlog.Models.Recipe>
+
 @{
-    ViewBag.Title = "Index";
+    ViewBag.Title = "Latest in Food";
 }
 
-<h2>Index</h2>
+<div class="jumbotron">
+    <h2>@ViewBag.Title</h2>
+</div>
 
-<a href="/food/show/Cauliflower-Wings/6">Cauliflower Wings</a>
+@foreach (var r in Model)
+{
+
+    <article class="post">
+        <header>
+            <div class="title">
+                <h3>@Html.ActionLink(r.Title, "article", new { SEName = r.SEName, id = r.Id })</h3>
+            </div>
+            <div class="meta">
+                <time class="published" datetime="@r.DisplayPublishDateUS">@r.DisplayPublishDateUS</time>
+            </div>
+        </header>
+        @if (r.ImageName != null) { 
+            <a href="/food/article/@r.SEName/@r.Id" class="image featured"><img src="/images/@r.ImageName" alt="" /></a>
+        }
+        <p>@r.Blurb</p>
+        <footer>
+            <ul class="actions">
+                <li>
+                    @Html.ActionLink("Continue Reading", "article", new { SEName = r.SEName, id = r.Id }, new { @class = "button big" })
+            </li>
+        </ul>
+    </footer>
+</article>
+
+
+
+
+    }

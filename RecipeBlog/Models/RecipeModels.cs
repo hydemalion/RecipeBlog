@@ -60,6 +60,10 @@ namespace RecipeBlog.Models
         {
            get { return Common.CleanStringForURL(Title); }
         }
+        public string DisplayPublishDateUS
+        {
+            get { return String.Format("{0:MM/dd/yyyy}", PublishDate); }
+        }
 
         public int Id { get; set; }
         [Required]

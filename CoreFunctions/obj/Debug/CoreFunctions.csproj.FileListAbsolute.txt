@@ -1,0 +1,5 @@
+\\fileserver\rastleb$\visual studio 2015\Projects\RecipeBlog\CoreFunctions\bin\Debug\CoreFunctions.dll
+\\fileserver\rastleb$\visual studio 2015\Projects\RecipeBlog\CoreFunctions\bin\Debug\CoreFunctions.pdb
+\\fileserver\rastleb$\visual studio 2015\Projects\RecipeBlog\CoreFunctions\obj\Debug\CoreFunctions.csprojResolveAssemblyReference.cache
+\\fileserver\rastleb$\visual studio 2015\Projects\RecipeBlog\CoreFunctions\obj\Debug\CoreFunctions.dll
+\\fileserver\rastleb$\visual studio 2015\Projects\RecipeBlog\CoreFunctions\obj\Debug\CoreFunctions.pdb
