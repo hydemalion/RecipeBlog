@@ -536,7 +536,7 @@
     <Content Include="Scripts\tinymce\skins\lightgray\fonts\tinymce-small.eot" />
     <Content Include="Scripts\tinymce\skins\lightgray\fonts\tinymce-mobile.woff" />
     <Content Include="Scripts\tinymce\langs\readme.md" />
-    <Content Include="Views\Food\ShowRecipe.cshtml" />
+    <Content Include="Views\Food\Article.cshtml" />
     <Content Include="Views\Food\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
@@ -569,6 +569,12 @@
     <EmbeddedResource Include="Migrations\201803292018244_selectedcategoriesfix.resx">
       <DependentUpon>201803292018244_selectedcategoriesfix.cs</DependentUpon>
     </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\CoreFunctions\CoreFunctions.csproj">
+      <Project>{b7332867-5729-4a3e-8e9b-61f375e37ccf}</Project>
+      <Name>CoreFunctions</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

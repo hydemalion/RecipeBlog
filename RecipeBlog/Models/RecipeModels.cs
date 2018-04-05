@@ -8,6 +8,7 @@ namespace RecipeBlog.Models
     using System.ComponentModel;
     using System.ComponentModel.DataAnnotations;
     using System.Data.Entity.Infrastructure;
+    using CoreFunctions;
 
 
     public class RecipeModels : DbContext
@@ -55,6 +56,10 @@ namespace RecipeBlog.Models
             this.SelectedCategories = new HashSet<Category>();
         }
 
+        public string SEName
+        {
+           get { return Common.CleanStringForURL(Title); }
+        }
 
         public int Id { get; set; }
         [Required]

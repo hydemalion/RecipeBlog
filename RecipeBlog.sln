@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RecipeBlog", "RecipeBlog\Re
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RecipeBlog.Tests", "RecipeBlog.Tests\RecipeBlog.Tests.csproj", "{65851EBF-87EF-4C9A-B91C-4FF393AD0ED8}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CoreFunctions", "CoreFunctions\CoreFunctions.csproj", "{B7332867-5729-4A3E-8E9B-61F375E37CCF}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{65851EBF-87EF-4C9A-B91C-4FF393AD0ED8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{65851EBF-87EF-4C9A-B91C-4FF393AD0ED8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{65851EBF-87EF-4C9A-B91C-4FF393AD0ED8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B7332867-5729-4A3E-8E9B-61F375E37CCF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B7332867-5729-4A3E-8E9B-61F375E37CCF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B7332867-5729-4A3E-8E9B-61F375E37CCF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B7332867-5729-4A3E-8E9B-61F375E37CCF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

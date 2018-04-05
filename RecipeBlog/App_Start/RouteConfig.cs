@@ -15,7 +15,7 @@ namespace RecipeBlog
 
             routes.MapRoute(
                 name: "Food",
-                url: "Food/{SEName}/{id}",
+                url: "Food/{action}/{SEName}/{id}",
                 defaults: new { controller = "Food", action = "Index", SEName = UrlParameter.Optional, id = UrlParameter.Optional }
             );
             routes.MapRoute(

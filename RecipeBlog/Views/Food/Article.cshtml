@@ -1,0 +1,52 @@
+﻿@model RecipeBlog.Models.Recipe
+
+@{
+    ViewBag.Title = "ScrubLuv - " +  Model.Title;
+}
+
+<h2>@Html.DisplayFor(model => model.Title)</h2>
+
+<div>
+    <hr />
+
+
+        <div>
+            @Html.DisplayFor(model => model.Blurb)
+        </div>
+
+
+        <div>
+            @Html.DisplayFor(model => model.PrepTime)
+        </div>
+
+        <div>
+            @Html.DisplayFor(model => model.Ingredients)
+        </div>
+        <div>
+            @Html.DisplayFor(model => model.QuickInstructions)
+        </div>
+
+        <div>
+            @Html.DisplayFor(model => model.FullInstructions)
+        </div>
+
+        <div>
+            @Html.DisplayFor(model => model.ImageName)
+        </div>
+        <div>
+            @Html.DisplayFor(model => model.Published)
+        </div>
+
+        <div>
+            @Html.DisplayFor(model => model.CreatedOn)
+        </div>
+
+        <div>
+            @Html.DisplayFor(model => model.PublishDate)
+        </div>
+
+
+</div>
+<p>
+    @Html.ActionLink("Back", "Index")
+</p>

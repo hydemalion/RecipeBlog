@@ -15,11 +15,20 @@ namespace RecipeBlog.Controllers
         private RecipeModels db = new RecipeModels();
 
 
-        // GET: Food/[SEName]/[id]
-        public ActionResult Index(int? id)
+        // GET: Food/
+        public ActionResult Index()
+        {
+
+            return View();
+        }
+
+
+
+        // GET: Food/Show/[SEName]/[id]
+        public ActionResult Article(int? id)
         {
             if (id != null)
-            { 
+            {
                 Recipe ShowRecipe = db.Recipes.Include(i => i.SelectedCategories).Where(i => i.Id == id).Single();
                 if (ShowRecipe == null)
                 {
@@ -29,11 +38,9 @@ namespace RecipeBlog.Controllers
             }
             else
             {
-                //List<Category> TopCategories = db.Categories.ToList();
-                //return View(TopCategories);
-                return View();
+                return HttpNotFound();
             }
         }
-        
+
     }
 }
