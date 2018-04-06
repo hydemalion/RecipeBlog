@@ -34,8 +34,6 @@ namespace RecipeBlog
             bundles.Add(new StyleBundle("~/Content/css").Include(
                       "~/Content/bootstrap.css",
                       "~/Content/main.css",
-                      "~/Content/ie8.css",
-                      "~/Content/ie9.css",
                       "~/Content/font-awesome.min.css",
                       "~/Content/bootstrap-datepicker3.min.css",
                       "~/Content/site.css"));

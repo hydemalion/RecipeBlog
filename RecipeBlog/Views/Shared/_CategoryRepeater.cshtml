@@ -7,7 +7,7 @@
             <li>
                 <article>
                     <header>
-                        <h3>@Html.ActionLink(c.Name, "cateogry", "food", new { SEName = c.SEName, id = c.Id }, null)</h3>
+                        <h3>@Html.ActionLink(c.Name, "category", "food", new { SEName = c.SEName, id = c.Id }, null)</h3>
                         <p>@c.Blurb</p>
                     </header>
                     <a href="/food/category/@c.SEName/@c.Id" class="image"><img src="/images/category/@c.ImageName" alt="@c.Name" /></a>
