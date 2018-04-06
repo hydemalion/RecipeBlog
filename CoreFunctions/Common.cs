@@ -14,7 +14,7 @@ namespace CoreFunctions
             //replace anything that isn't a character or a number with a dash
             string cleaned = Regex.Replace(input, "[^\\w]", "-");
             //make sure no dashes are doubled
-            cleaned = cleaned.Replace("--", "-").Replace("--", "-");
+            cleaned = cleaned.Replace("--", "-").Replace("--", "-").ToLowerInvariant();
             return cleaned;
         }
 

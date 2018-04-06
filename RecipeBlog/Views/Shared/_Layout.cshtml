@@ -41,7 +41,7 @@
             <h1><a href="#">Scrub Luv</a></h1>
             <nav class="links">
                 <ul>
-                    <li>@Html.ActionLink("Food","Index", "Food")</li>
+                    <li>@Html.ActionLink("Food", "Index", "Food")</li>
                     <li>@Html.ActionLink("Art", "Index", "Art")</li>
                     <li>@Html.ActionLink("Gaming", "Index", "Gaming")</li>
                 </ul>
@@ -125,47 +125,7 @@
 
             
             <!-- Posts List -->
-            <section id="category-list">
-                <ul class="posts">
-                    <li>
-                        <article>
-                            <header>
-                                <h3><a href="/food/category/main-courses/1">Main Courses</a></h3>
-                                <p>Eat well every day</p>
-                            </header>
-                            <a href="#" class="image"><img src="images/pic08.jpg" alt="" /></a>
-                        </article>
-                    </li>
-                    <li>
-                        <article>
-                            <header>
-                                <h3><a href="#">Side Dishes</a></h3>
-                                <p>Inspiration for add-ons</p>
-                            </header>
-                            <a href="#" class="image"><img src="images/pic10.jpg" alt="" /></a>
-                        </article>
-                    </li>
-                    <li>
-                        <article>
-                            <header>
-                                <h3><a href="#">Desserts</a></h3>
-                                <p>Treat yourself</p>
-                            </header>
-                            <a href="#" class="image"><img src="images/pic09.jpg" alt="" /></a>
-                        </article>
-                    </li>
-                    <li>
-                        <article>
-                            <header>
-                                <h3><a href="#">Quick and Easy</a></h3>
-                                <p>Simple Scrub eating in no time!</p>
-                            </header>
-                            <a href="#" class="image"><img src="images/pic11.jpg" alt="" /></a>
-                        </article>
-                    </li>
-
-                </ul>
-            </section>
+           @Html.Action("_CategoryRepeater", "Home")
            
             <!-- About -->
             <section class="blurb">

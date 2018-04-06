@@ -232,6 +232,9 @@
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
+    <Content Include="images\category\desserts.png" />
+    <Content Include="images\category\main-courses.jpg" />
+    <Content Include="images\category\side-dishes.png" />
     <Content Include="images\ScrubLogoOfficialYellow.png" />
     <Content Include="Scripts\bootstrap-datepicker.js" />
     <Content Include="Scripts\bootstrap-datepicker.min.js" />
@@ -541,6 +544,7 @@
     <Content Include="Views\Food\Index.cshtml" />
     <Content Include="Views\Shared\_RecipeRepeater.cshtml" />
     <Content Include="Views\Food\Category.cshtml" />
+    <Content Include="Views\Shared\_CategoryRepeater.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
