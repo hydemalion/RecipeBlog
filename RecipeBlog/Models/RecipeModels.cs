@@ -104,6 +104,10 @@ namespace RecipeBlog.Models
         {
             this.Recipes = new HashSet<Recipe>();
         }
+        public string SEName
+        {
+            get { return Common.CleanStringForURL(Name); }
+        }
         public int Id { get; set; }
         [Required]
         public string Name { get; set; }

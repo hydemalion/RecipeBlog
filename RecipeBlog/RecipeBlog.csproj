@@ -538,6 +538,8 @@
     <Content Include="Scripts\tinymce\langs\readme.md" />
     <Content Include="Views\Food\Article.cshtml" />
     <Content Include="Views\Food\Index.cshtml" />
+    <Content Include="Views\Shared\_RecipeRepeater.cshtml" />
+    <Content Include="Views\Food\Category.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

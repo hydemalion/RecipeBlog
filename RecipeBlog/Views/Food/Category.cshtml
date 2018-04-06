@@ -1,12 +1,11 @@
 ﻿@model IEnumerable<RecipeBlog.Models.Recipe>
 
-@{
-    ViewBag.Title = "Latest in Food";
-}
 
 <div class="jumbotron">
     <h2>@ViewBag.Title</h2>
+    <p>@ViewBag.Blurb</p>
 </div>
 
-
 @Html.Partial("_RecipeRepeater")
+
+

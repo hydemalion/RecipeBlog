@@ -43,5 +43,32 @@ namespace RecipeBlog.Controllers
             }
         }
 
+        // GET: Food/Article/[SEName]/[id]
+        public ActionResult Category(int? id)
+        {
+            if (id != null)
+            {
+                Category thisCategory = db.Categories.Find(id);
+
+                if (thisCategory != null)
+                {
+                    ViewBag.Title = thisCategory.Name;
+                    ViewBag.Blurb = thisCategory.Blurb;
+                    List<Recipe> RecentRecipes = db.Recipes.Include(i => i.SelectedCategories).AsEnumerable().Where(i => i.SelectedCategories.Contains(thisCategory)).OrderByDescending<Recipe, DateTime>(r => r.CreatedOn).Take(10).ToList();
+                    return View(RecentRecipes);
+                }
+
+                else 
+                {
+                    return HttpNotFound();
+                }
+                
+            }
+            else
+            {
+                return HttpNotFound();
+            }
+        }
+
     }
 }
