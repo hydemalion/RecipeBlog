@@ -1527,7 +1527,7 @@
 		}
 
 	h2 {
-		font-size: 1.1em;
+		font-size: 1.3em;
 	}
 
 	h3 {
@@ -2879,6 +2879,38 @@
 		margin-top: -1em;
 		text-transform: uppercase;
 	}
+
+
+/*recipe*/
+    .recipe .sub-info {
+		color: #3c3b3b;
+		font-family: "Raleway", Helvetica, sans-serif;
+		font-size: 0.7em;
+		letter-spacing: 0.25em;
+		margin-top: 0.5em;
+		text-transform: uppercase;
+		white-space: nowrap;
+        padding-right: 1.5em;
+	}
+
+    .recipe .piece {
+        border-bottom: solid 1px rgba(117, 117, 117, 0.3);
+        border-bottom-width: 1px;
+        border-bottom-style: solid;
+        border-bottom-color: rgba(117, 117, 117, 0.3);
+        padding: 0 0 3em 0;
+    }
+
+    .recipe .piece header {
+        font-size: 1.3em;
+        font-weight: 800;
+        margin: 1.5em 0 1.5em 0;
+    }
+    .recipe .piece .sub-head {
+        font-size: 0.7em;
+        font-weight: 400;
+    }
+
 
 /* Table */
 

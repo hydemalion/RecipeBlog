@@ -5,48 +5,40 @@
 }
 
 <h2>@Html.DisplayFor(model => model.Title)</h2>
+<div class="recipe">
 
-<div>
-    <hr />
+    <span class="sub-info" ><time datetime="@Html.DisplayFor(model => model.PublishDate)">@Html.DisplayFor(model => model.PublishDate)</time></span>
+    <span class="sub-info" ><strong>&bull;</strong></span>
+    <span class="sub-info">Preparation Time: @Html.DisplayFor(model => model.PrepTime)</span>
 
 
-        <div>
+    <article>
+        <hr />
+        <img class="image featured" src="/images/@Html.DisplayFor(model => model.ImageName)" alt="@Html.DisplayFor(model => model.Title)">
+
+        <section class="piece">
             @Html.DisplayFor(model => model.Blurb)
-        </div>
+        </section>
 
+        <section class="piece">
+            <header>Ingredients</header>
+            @Html.Raw(Model.Ingredients)
+        </section>
 
-        <div>
-            @Html.DisplayFor(model => model.PrepTime)
-        </div>
+        <section class="piece">
+            <header>Quick Instructions
+                <div class="sub-head">If you need more details, <a href="#details">they're further down</a>.</div></header>
+            
+            @Html.Raw(Model.QuickInstructions)
+        </section>
 
-        <div>
-            @Html.DisplayFor(model => model.Ingredients)
-        </div>
-        <div>
-            @Html.DisplayFor(model => model.QuickInstructions)
-        </div>
+        <section class="piece"><a name="details"></a>
+            <header>Detailed Instructions</header>
+            @Html.Raw(Model.FullInstructions)
+        </section>
 
-        <div>
-            @Html.DisplayFor(model => model.FullInstructions)
-        </div>
-
-        <div>
-            @Html.DisplayFor(model => model.ImageName)
-        </div>
-        <div>
-            @Html.DisplayFor(model => model.Published)
-        </div>
-
-        <div>
-            @Html.DisplayFor(model => model.CreatedOn)
-        </div>
-
-        <div>
-            @Html.DisplayFor(model => model.PublishDate)
-        </div>
-
-
+    </article>
+    <p>
+        @Html.ActionLink("Back", "Index")
+    </p>
 </div>
-<p>
-    @Html.ActionLink("Back", "Index")
-</p>
