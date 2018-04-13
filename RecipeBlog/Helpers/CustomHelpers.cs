@@ -26,7 +26,7 @@ namespace RecipeBlog.Helpers
                 builder.MergeAttribute("value", c.Id.ToString());
                 builder.MergeAttribute("type", "checkbox");
                 if (selectedCategories != null)
-                { 
+                {
                     if (selectedCategories.Contains(c))
                         builder.MergeAttribute("checked", "checked");
                 }
@@ -39,5 +39,20 @@ namespace RecipeBlog.Helpers
             return new HtmlString(CheckBoxList);
         }
 
+
+        public static IHtmlString CategoryTagList(ICollection<Category> selectedCategories)
+        {
+            string TagList = "";
+
+            foreach (Category c in selectedCategories)
+            {
+                TagList += "<div class='btn-lg action-link'>";
+                TagList += "<a href='/food/category/" + c.SEName + "/" + c.Id + "'>" + c.Name + "</a>";
+                TagList += "</div>";
+
+            }
+
+            return new HtmlString(TagList);
+        }
     }
 }
